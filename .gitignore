@@ -1,0 +1,14 @@
+*.log
+*.pyc
+*.pyc
+*.swo
+*.swp
+*.swn
+*.gpg
+*~
+tmp
+pip-log.txt
+build
+*.egg
+*.egg-info
+distribute-*.tar.gz
