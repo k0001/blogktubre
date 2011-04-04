@@ -8,6 +8,8 @@ import argparse
 if __name__ == '__main__':
     # commandline options
     parser = argparse.ArgumentParser(description="blogktubre management")
+    parser.add_argument('--debug', action='store_true', default=False,
+                        help=u"Print debug output")
     subparsers = parser.add_subparsers(dest='subparser_name', title="Subcommands")
 
     # commandline options: runserver
@@ -29,5 +31,5 @@ if __name__ == '__main__':
         except ValueError:
             import socket
             port = socket.getservbyname(args.port)
-        app.run(host=args.host, port=port)
+        app.run(host=args.host, port=port, debug=args.debug)
 
