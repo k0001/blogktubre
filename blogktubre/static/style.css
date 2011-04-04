@@ -38,11 +38,24 @@ header#main-header h2:after {
     color: #f06;
 }
 
-footer#main-footer {
-    width: 960px;
-    font-family: "OFL Sorts Mill Goudy TT", "Georgia", "DejaVu Serif", serif;
+section#main-section article p {
+    margin-bottom: 1.6em;
 }
 
 footer#main-footer {
     margin-top: 120px;
+    font-size: 83%;
+    opacity: 0.2;
+}
+
+.optshit {
+    opacity: 0.04;
+}
+.optshit:hover {
+    opacity: 0.2;
+}
+
+span.email-address .user:after {
+    content: "@";
+    font-weight: normal;
 }
