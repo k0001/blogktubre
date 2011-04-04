@@ -1,0 +1,48 @@
+html * {
+    margin: 0;
+    padding: 0;
+}
+
+a:link, a:visited, a:hover {
+    text-decoration: none;
+    color: #f06;
+}
+
+body {
+    color: #333;
+    padding: 64px;
+}
+
+header#main-header,
+section#main-section,
+footer#main-footer {
+    margin: auto;
+    margin-top: 64px;
+    width: 960px;
+    font-family: "OFL Sorts Mill Goudy TT", "Georgia", "DejaVu Serif", serif;
+}
+
+header#main-header h1 {
+    font-size: 3em;
+    font-weight: normal;
+}
+
+header#main-header h2 {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 1.4em;
+}
+
+header#main-header h2:after {
+    content: "¬";
+    color: #f06;
+}
+
+footer#main-footer {
+    width: 960px;
+    font-family: "OFL Sorts Mill Goudy TT", "Georgia", "DejaVu Serif", serif;
+}
+
+footer#main-footer {
+    margin-top: 120px;
+}

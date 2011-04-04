@@ -1,8 +1,8 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask('blogktubre')
 
 
 @app.route('/')
 def index():
-    return u"Hello"
+    return render_template('index.html')
