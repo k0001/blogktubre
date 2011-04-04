@@ -19,6 +19,9 @@ setup(
     zip_safe = False,
     packages = find_packages(),
     include_package_data = True,
+    scripts = [
+        'scripts/blogktubre',
+    ],
 
     install_requires = [
         'Flask==0.6.1'

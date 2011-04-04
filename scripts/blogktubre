@@ -1,0 +1,33 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+from __future__ import absolute_import
+import argparse
+
+
+if __name__ == '__main__':
+    # commandline options
+    parser = argparse.ArgumentParser(description="blogktubre management")
+    subparsers = parser.add_subparsers(dest='subparser_name', title="Subcommands")
+
+    # commandline options: runserver
+    parser_runserver = subparsers.add_parser('runserver', help=u"Run web server")
+    parser_runserver.add_argument('--host', action='store', type=str, default='localhost',
+                                  help=u"Listening host")
+    parser_runserver.add_argument('--port', action='store', type=str, default='5000',
+                                  help=u"Listening port")
+
+    args = parser.parse_args()
+
+    # running
+
+    if args.subparser_name == 'runserver':
+        from blogktubre import app
+
+        try:
+            port = int(args.port)
+        except ValueError:
+            import socket
+            port = socket.getservbyname(args.port)
+        app.run(host=args.host, port=port)
+
